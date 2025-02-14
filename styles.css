@@ -1,0 +1,191 @@
+/* General Style */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Sans-Serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 60px;
+  margin-left: 10px;
+}
+
+/* Task Input */
+.task-input {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+  flex: 1;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 30px;
+  background: #ff5945;
+  color: white;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e03e31;
+}
+
+/* Progress Bar */
+.progress-container {
+  background: #edeef0;
+  border-radius: 30px;
+  height: 20px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  background: #ff5945;
+  height: 100%;
+  width: 0;
+  transition: width 0.3s;
+}
+
+.progress-container span {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* To-Do List Items */
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  font-size: 19px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+  background: #f1f1f1;
+}
+
+ul li.added {
+  transform: scale(1.05);
+  background-color: #e6ffe6;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+  background: #d3d3d3;
+}
+
+ul li.normal {
+  color: #000;
+}
+
+ul li.urgent {
+  color: white;
+  background: linear-gradient(135deg, #ff6347, #ff4500);
+}
+
+ul li.checked::before {
+  background-image: url('https://assets.onecompiler.app/42psyw7qm/42qnse7r4/checked.png');
+}
+
+/* Close Button for Tasks */
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Notifications */
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.notification {
+  background: #ff5945;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
