@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="https://uploads.onecompiler.io/42psyw7qm/42qnse7r4/icon.png" alt="To-Do List Icon"></h2>
+
+            <div class="task-input">
+                <input type="text" id="input-box" placeholder="Enter task title"> 
+                <input type="datetime-local"    id="reminder">
+                <select id="urgency-select">
+                    <option value="normal">Normal</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+                <button onclick="addTask()">Add Task</button>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <ul id="list-container">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
